@@ -10,6 +10,7 @@ tokenizer = BertTokenizer.from_pretrained(model_dir + '/config.json')
 # Define the Ocean traits
 ocean_traits = ['Extraversion (cEXT)', 'Neuroticism (cNEU)', 'Agreeableness (cAGR)', 'Conscientiousness (cCON)', 'Openness (cOPN)']
 
+
 # Import necessary libraries for scraping, preprocessing, and model prediction
 import requests
 from bs4 import BeautifulSoup
