@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Traits </title>
+    <link rel="icon" href="icon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .traits {
+            display: grid;
+            flex-wrap: wrap;
+            justify-content: center;
+            grid-template-columns: repeat(2, 1fr) 1fr;
+        }
+
+        .trait {
+            position: relative; /* Added position relative */
+            margin: 40px;
+            padding: 20px;
+            border: 5px solid #ddd;
+            border-radius: 20px;
+            text-align: center;
+            background-color: black;
+        }
+
+        .trait img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        .description-box {
+            display: none; /* Initially hidden */
+            position: absolute;
+            top: 10%; /* Adjusted top position */
+            left: 5%;
+            transform: translateX(-50%);
+            background-color: #ffffff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(189, 180, 180, 0.2);
+        }
+
+        .trait:hover .description-box {
+            display: block;
+        }
+
+        p {
+            font-size: 25px;
+            font-style: bold;
+            color: aliceblue;
+        }
+        .boxstyle
+        {
+            font-size: 15px;
+            font-style: italic;
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center; color: #F7CE4D;">Social Media Personality Traits</h1>
+
+    <div class="container">
+        <div class="traits">
+            <div class="trait">
+                <div class="trait-wrapper">
+
+                    <img src="openness.png" alt="Openness">
+                    <p>Openness</p>
+                    <div class="description-box">
+                        <p class="boxstyle"><b>Openness:</b> is like being really curious and interested in trying new things. If you're open, you enjoy exploring new ideas, being creative, and not sticking to the same old routine. People with high openness like to learn, try different activities, and are open to different ways of thinking. It's like having a mindset that's ready for adventures and always wanting to discover new stuff!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="trait">
+                <div class="trait-wrapper">
+                    <img src="extraversion.png" alt="Extraversion">
+                    <p>Extraversion</p>
+                    <div class="description-box">
+                        <p class="boxstyle"><b>Extraversion:</b> is about being outgoing and sociable. If you're extraverted, you're probably the kind of person who loves being around others, making new friends, and being the life of the party. Extraverts are often energetic, talkative, and enjoy social activities. They get their energy from being with people and tend to be cheerful and enthusiastic in social situations. In simple terms, it's like having a natural love for socializing and being the friendly, lively person in the group!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat the structure for other traits -->
+            <div class="trait">
+                <div class="trait-wrapper">
+                    <img src="neuroticism.png" alt="Extraversion">
+                    <p>Neuroticism</p>
+                    <div class="description-box">
+                        <p class="boxstyle"><b>Neuroticism:</b> is a personality trait that describes how emotional and sensitive a person is. If someone has high neuroticism, they may experience more intense emotions like worry, fear, or sadness. On the other hand, low neuroticism means being more emotionally stable and less likely to get upset easily. It's like a measure of how much our feelings can sometimes take over and affect our mood.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trait">
+                <div class="trait-wrapper">
+                    <img src="agreeableness.png" alt="Extraversion">
+                    <p>Agreeableness</p>
+                    <div class="description-box">
+                        <p class="boxstyle"><b>Agreeableness :</b>is all about being friendly, kind, and cooperative. If you're agreeable, you're someone who likes to get along with others, help people out, and avoid conflicts. People with high agreeableness are often empathetic, understanding, and enjoy being part of a harmonious group. It's like having a warm and caring nature that makes it easy for others to be around you.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trait">
+                <div class="trait-wrapper">
+                    <img src="Conscientiousness.png" alt="Extraversion">
+                    <p>Conscientiousness</p>
+                    <div class="description-box">
+                        <p class="boxstyle"><b>Conscientiousness:</b> is about being organized and responsible. If you're conscientious, you like to plan things ahead, pay attention to details, and finish what you start. People with high conscientiousness are often reliable, hardworking, and good at managing their time. It's like having a strong sense of duty and making sure things are done well and on time.</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

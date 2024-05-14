@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <title>Evaluation </title>
+    <link rel="icon" href="icon.png" type="image/x-icon">
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            background-color: #F7CE4D;
+        }
+
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background-color: #ffffff;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .button {
+            background-color: #ffffff;
+            color: #ffcc00;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: larger;
+        }
+
+        .filtered-image-container {
+            position: relative;
+        }
+
+        .filtered-image {
+            filter: blur(0.px) brightness(1.0);
+            
+        }
+
+        .center-text-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #060606;
+            font-size: larger;
+            font-weight:800;
+            z-index: 1;
+        }
+
+        .center-text {
+            max-width: 600px; /* Set a maximum width for better readability */
+            margin: 0 auto; /* Center the text within the container */
+        }
+
+        .evaluate-button {
+            background-color: #060606;
+            color: #ffcc00;
+            border: 2px solid #060606;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: larger;
+            display: block;
+            margin-top: 20px;
+            position: absolute;
+            left: 70%;
+            transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+        }
+        .evaluate-button:hover {
+            background-color: #ffcc00;
+            color: #060606;
+            border: 2px solid #ffcc00;
+        }
+        .input-box {
+            margin-top: 10px;
+            width: 300px; 
+            padding: 8px; 
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 > <b>SOCIAL MEDIA PERSONALITY INSIGHT ENGINE</b></h1>
+    </div>
+    <div class="filtered-image-container">
+        <img src="evalute.png" alt="Your Image" class="filtered-image">
+        <form method="post" action="{% url 'scrape_and_evaluate' %}">
+            {% csrf_token %}
+            <div class="center-text-container">
+                <div class="center-text">
+                    <input type="text" class="input-box" name="profile_url" placeholder="Enter Post URL">
+                    <button type="submit" class="evaluate-button">EVALUATE</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
